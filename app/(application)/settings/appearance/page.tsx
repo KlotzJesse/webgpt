@@ -11,7 +11,7 @@ export default function SettingsAppearancePage() {
           and night themes.
         </p>
       </div>
-      <Separator />
+      <Separator className="border-b" />
       <AppearanceForm />
     </div>
   );

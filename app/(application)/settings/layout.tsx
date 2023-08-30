@@ -10,24 +10,12 @@ export const metadata: Metadata = {
 
 const sidebarNavItems = [
   {
-    title: "Profile",
-    href: "/settings",
-  },
-  {
     title: "Account",
-    href: "/settings/account",
+    href: "/settings",
   },
   {
     title: "Appearance",
     href: "/settings/appearance",
-  },
-  {
-    title: "Notifications",
-    href: "/settings/notifications",
-  },
-  {
-    title: "Display",
-    href: "/settings/display",
   },
 ];
 
@@ -45,7 +33,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
             Manage your account settings and set e-mail preferences.
           </p>
         </div>
-        <Separator className="my-6" />
+        <Separator className="my-6 border-b" />
         <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
           <aside className="-mx-4 lg:w-1/5">
             <SidebarNav items={sidebarNavItems} />
