@@ -22,7 +22,7 @@ export default async function fetchSources(formData: FormData) {
   }
 
   await inngest.send({
-    name: "test/hello.world",
+    name: "app/fetch-sources",
     data: {
       ...data,
     },

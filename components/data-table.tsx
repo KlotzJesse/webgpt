@@ -189,15 +189,17 @@ export function DataTable({ data }: { data: any }) {
           className="max-w-sm"
         />
         <div className="ml-auto flex items-center space-x-2">
-          <Button
-            variant={"secondary"}
-            onClick={() => {
-              fetch(`/api/data/train`);
-            }}
-          >
-            <BotIcon className="w-4 h-4 mr-2" />
-            Train all documents
-          </Button>
+          {data.length > 0 && (
+            <Button
+              variant={"secondary"}
+              onClick={() => {
+                fetch(`/api/data/train`);
+              }}
+            >
+              <BotIcon className="w-4 h-4 mr-2" />
+              Train all documents
+            </Button>
+          )}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline">

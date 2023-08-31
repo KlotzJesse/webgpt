@@ -11,7 +11,7 @@ const openai = new OpenAI({
 
 export const helloWorld = inngest.createFunction(
   { name: "Fetch sources" },
-  { event: "test/hello.world" },
+  { event: "app/fetch-sources" },
   async ({ event, step }) => {
     const sites = await step.run("Fetch sitemap", async () => {
       const request = await fetch(event.data.src);

@@ -18,7 +18,7 @@ export default async function fetchSources() {
   }
 
   const events = data.map((source: Source) => ({
-    name: "test/hello.world",
+    name: "app/fetch-sources",
     data: {
       ...source,
     },

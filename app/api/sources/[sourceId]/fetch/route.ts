@@ -28,7 +28,7 @@ export async function GET(
   }
 
   await inngest.send({
-    name: "test/hello.world",
+    name: "app/fetch-sources",
     data: {
       ...data,
     },

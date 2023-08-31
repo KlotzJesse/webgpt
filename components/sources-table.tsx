@@ -180,11 +180,13 @@ export function SourcesTable({
         />
 
         <div className="ml-auto flex items-center space-x-2">
-          <form action={fetchSources}>
-            <Button variant={"secondary"}>
-              <RefreshCwIcon className="w-4 h-4 mr-2" /> Fetch all sources
-            </Button>
-          </form>
+          {data.length > 0 && (
+            <form action={fetchSources}>
+              <Button variant={"secondary"}>
+                <RefreshCwIcon className="w-4 h-4 mr-2" /> Fetch all sources
+              </Button>
+            </form>
+          )}
           <AddSourceAction projectId={projectId}>
             <Button variant="outline">
               <PlusIcon className="w-4 h-4 mr-2" />
